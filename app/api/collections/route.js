@@ -31,7 +31,6 @@ export async function PATCH(request) {
     let req = await request.json();
     if (req.collectionid && req.parentid) {
       let collection=await Collection.findByIdAndUpdate(req.collectionid)
-      console.log(collection)
       if(!collection.tasks.includes(req.parentid)){
         collection.tasks.push(req.parentid)
         await collection.save()

@@ -21,7 +21,6 @@ export async function DELETE(req) {
 
     await connectDB();
     let task=await Task.findById(parentid)
-    console.log(id,task.subtasks)
     const subtaskId = mongoose.Types.ObjectId.createFromHexString(id)
     task.subtasks.pull(subtaskId)
     await task.save()
@@ -42,7 +41,6 @@ export async function PATCH(request) {
     }
     else{
       let { id, value } = req
-      console.log(id,value)
       await SubTask.findByIdAndUpdate(id, { isCompleted: value });
     }
     return NextResponse.json({ message: "updating" });
