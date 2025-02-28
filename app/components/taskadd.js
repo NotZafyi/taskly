@@ -54,7 +54,7 @@ export default function Modal({ isOpen, onClose,collectionid,taskid}) {
     await posttask(title, desc)
     onClose()
     setFormData({ title: "", desc: "" });
-    console.log("Adding task...")
+  
     
   }
   
