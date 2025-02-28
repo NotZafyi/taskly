@@ -3,7 +3,7 @@ import Login from "./components/login";
 import Image from "next/image";
 
 function page() {
-
+console.log("hello")
   return (
 
     <div className="w-screen h-screen flex justify-center items-center background">
