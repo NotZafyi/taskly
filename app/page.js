@@ -1,9 +1,10 @@
 "use client"
 import Login from "./components/login";
 import Image from "next/image";
-
+import { useSession } from "next-auth/react";
 function page() {
-console.log("hello")
+  const { data: session } = useSession();
+console.log(session)
   return (
 
     <div className="w-screen h-screen flex justify-center items-center background">
