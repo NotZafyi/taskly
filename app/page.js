@@ -3,6 +3,8 @@ import Login from "./components/login";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+
 
 function page() {
   const { data: session } = useSession();
