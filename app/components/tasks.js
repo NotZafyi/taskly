@@ -17,6 +17,8 @@ import { CiSquarePlus } from "react-icons/ci";
 import "./tasks.css";
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
 import { MdMenu } from "react-icons/md";
+import PerfectScrollbar from "react-perfect-scrollbar";
+import "react-perfect-scrollbar/dist/css/styles.css";
 import {
   Accordion,
   AccordionContent,
@@ -402,6 +404,7 @@ const tasks = () => {
             />
           </div>
         </div>
+        <PerfectScrollbar>
         <div className="box min-w-[700] mt-16 ml-52 min-h-[80vh] flex gap-2">
           <div className="box hide-scrollbar min-h-full min-w-[700] overflow-y-scroll flex flex-col gap-4 p-4 bg-[#070707ba] border border-gray-900 rounded-xl">
             <div className="flex justify-between items-center max-h-full">
@@ -788,6 +791,7 @@ const tasks = () => {
             }
           })}
         </div>
+          </PerfectScrollbar>
       </div>
     </div>
   );
