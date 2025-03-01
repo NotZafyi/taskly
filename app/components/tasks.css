@@ -33,3 +33,7 @@
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
 }
+
+.container{
+  min-width: 500px;
+}
