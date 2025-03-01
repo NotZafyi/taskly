@@ -17,7 +17,6 @@ function page() {
     }
   }, [])
   
-console.log(session)
   return (
 
     <div className="w-screen h-screen flex justify-center items-center background">

@@ -61,8 +61,6 @@ export async function POST(request) {
       let task = await Task.create({ title, desc, email: email });
       if (req.collection) {
         let collection = await Collection.findById(req.collection);
-        console.log(collection);
-        console.log(task._id);
         collection.tasks.push(task._id);
         await collection.save();
       }
