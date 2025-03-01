@@ -2,8 +2,19 @@
 import Login from "./components/login";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+
 function page() {
   const { data: session } = useSession();
+  useEffect(() => {
+
+
+    if(session){
+      const router=useRouter()
+      router.push("/dashboard")
+    }
+  }, [])
+  
 console.log(session)
   return (
 
