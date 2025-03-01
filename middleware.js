@@ -1,25 +1,11 @@
-import { NextResponse } from "next/server";
-
-export function middleware(req) {
-  const cookieHeader = req.headers.get("cookie");
-  const token = cookieHeader?.split("; ").find(row => row.startsWith("token="))?.split("=")[1];
-
-  const { pathname } = req.nextUrl;
-
-  // Redirect unauthenticated users from /dashboard to /
-  if (!token && pathname.startsWith("/dashboard")) {
-    return NextResponse.redirect(new URL("/", req.url));
-  }
-
-  // Redirect authenticated users from / to /dashboard
-  if (token && pathname === "/") {
-    return NextResponse.redirect(new URL("/dashboard", req.url));
-  }
-
-  return NextResponse.next();
+import { NextResponse } from 'next/server'
+ 
+// This function can be marked `async` if using `await` inside
+export function middleware(request) {
+  return NextResponse.redirect(new URL('/', request.url))
 }
-
-// Apply middleware to specific routes
+ 
+// See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/dashboard/:path*", "/"],
-};
+  matcher: '/dashboard/:path*',
+}
