@@ -403,7 +403,7 @@ const tasks = () => {
           </div>
         </div>
         <div className="min-w-screen mt-16 ml-52 min-h-[80vh] flex flex-col gap-2">
-          <div className="hide-scrollbar min-h-full overflow-y-scroll min-w-max flex flex-col gap-4 p-4 bg-[#070707ba] border border-gray-900 rounded-xl">
+          <div className="hide-scrollbar min-h-full overflow-y-scroll min-w-[700] flex flex-col gap-4 p-4 bg-[#070707ba] border border-gray-900 rounded-xl">
             <div className="flex justify-between items-center max-h-full">
               <h1 className="text-2xl p-2">Tasks</h1>
               <button
