@@ -1,16 +1,23 @@
-import { NextRequest, NextResponse } from "next/server";
-
+import { NextResponse } from "next/server";
 
 export function middleware(req) {
-    const token = req.cookies.get("next-auth.session-token");
-    if (!token && req.nextUrl.pathname.startsWith("/dashboard")) {
-        console.log("Redirecting to /...");
-        return NextResponse.redirect(new URL("/", req.url));
-    }
+  const token = req.cookies.get("token")?.value; // Get token from cookies
+  const { pathname } = req.nextUrl;
 
-    return NextResponse.next(); // Allow access if authenticated
+  // Redirect unauthenticated users from /dashboard to /login
+  if (!token && pathname.startsWith("/dashboard")) {
+    return NextResponse.redirect(new URL("/", req.url));
+  }
+
+  // Redirect authenticated users from /login to /dashboard
+  if (token && pathname === "/") {
+    return NextResponse.redirect(new URL("/dashboard", req.url));
+  }
+
+  return NextResponse.next();
 }
 
+// Apply middleware to specific routes
 export const config = {
-    matcher: ["/dashboard/:path*"],
+  matcher: ["/dashboard/:path*", "/"],
 };
