@@ -318,7 +318,7 @@ const tasks = () => {
         pauseOnHover
         theme="dark"
       />
-      <div className=" w-40 rounded-lg p-1 gird flex-col gap-1 justify-between items-center fixed max-h-screen h-[90vh]  ">
+      <div className=" w-40 rounded-lg p-1 flex-col gap-1 justify-between items-center fixed max-h-screen h-[90vh]  ">
         <div>
           <Image
             src={"/5.gif"}
@@ -405,7 +405,7 @@ const tasks = () => {
           </div>
         </div>
       
-        <div className="box min-w-[700] mt-16 ml-52 min-h-[80vh] grid grid-cols-3 gap-2">
+        <div className="box min-w-[700] mt-16 ml-52 min-h-[80vh] grid grid-cols-2 gap-2">
           <div className="box hide-scrollbar min-h-full min-w-[700] overflow-y-scroll flex flex-col gap-4 p-4 bg-[#070707ba] border border-gray-900 rounded-xl">
             <div className="flex justify-between items-center max-h-full">
               <h1 className="text-2xl p-2">Tasks</h1>
