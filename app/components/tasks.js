@@ -384,7 +384,7 @@ const tasks = () => {
         </button>
       </div>
       <div className="flex flex-col">
-        <div className="flex justify-end fixed top-2 right-2 ">
+        <div className="flex justify-end absolute top-2 right-2 ">
           <div className="flex px-4 py-1 gap-4 h-fit ">
             <div className="flex flex-col gap-1 justify-center items-end ">
               <h1 className="min-w-24 text-sm text-right text-white">
