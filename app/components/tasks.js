@@ -405,7 +405,7 @@ const tasks = () => {
           </div>
         </div>
       
-        <div className="min-w-[700] mt-16 ml-52 min-h-[80vh] grid grid-cols-3 gap-2">
+        <div className="min-w-[700] mt-16 ml-52 min-h-[80vh] grid grid-cols-3 gap-3">
           <div className="box hide-scrollbar min-h-full min-w-[700] overflow-y-scroll flex flex-col gap-4 p-4 bg-[#070707ba] border border-gray-900 rounded-xl">
             <div className="flex justify-between items-center max-h-full">
               <h1 className="text-2xl p-2">Tasks</h1>
@@ -593,9 +593,9 @@ const tasks = () => {
               return (
                 <div
                   key={collectiontasks._id}
-                  className="hide-scrollbar min-h-[80vh] max-h-full overflow-y-scroll flex flex-col gap-4 min-w-[700]  p-4 bg-[#070707ba] border border-gray-900 rounded-xl"
+                  className="box hide-scrollbar min-h-[80vh] max-h-full overflow-y-scroll flex flex-col gap-4  p-4 bg-[#070707ba] border border-gray-900 rounded-xl"
                 >
-                  <div className="box flex justify-between min-w-[700]  items-center max-h-full">
+                  <div className="box flex justify-between  items-center max-h-full">
                     <h1 className="text-2xl p-2">
                       {collectiontasks.collectionName}
                     </h1>
