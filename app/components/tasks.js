@@ -405,7 +405,7 @@ const tasks = () => {
           </div>
         </div>
       
-        <div className=" mt-16 ml-52 min-h-[80vh] grid grid-cols-3 gap-3">
+        <div className=" mt-16 ml-52 min-h-[80vh] grid grid-cols-3 gap-2">
           <div className="box hide-scrollbar min-h-full  overflow-y-scroll flex flex-col gap-4 p-4 bg-[#070707ba] border border-gray-900 rounded-xl">
             <div className="flex justify-between items-center max-h-full">
               <h1 className="text-2xl p-2">Tasks</h1>
