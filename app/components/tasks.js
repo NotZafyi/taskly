@@ -595,7 +595,7 @@ const tasks = () => {
                   key={collectiontasks._id}
                   className="box hide-scrollbar min-h-full overflow-y-scroll flex flex-col gap-4 p-4 bg-[#070707ba] border border-gray-900 rounded-xl"
                 >
-                  <div className="box flex justify-between items-center max-h-full">
+                  <div className="box flex justify-between items-center max-h-full w-[388]">
                     <h1 className="text-2xl p-2">
                       {collectiontasks.collectionName}
                     </h1>
