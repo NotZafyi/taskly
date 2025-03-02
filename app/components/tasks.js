@@ -406,7 +406,7 @@ const tasks = () => {
         </div>
       
         
-        <div className="mt-16 ml-52 min-h-[80vh] grid grid-cols-2 gap-2">
+        <div className="mt-16 ml-52 min-h-[80vh] grid grid-cols-3 gap-2">
 
 
 
